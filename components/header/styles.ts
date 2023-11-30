@@ -1,0 +1,51 @@
+import styled from 'styled-components';
+
+export const Container = styled.header`
+  position: absolute;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      background: none;
+      border: none;
+      color: ${({ theme }) => theme.colors.primary};
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+    > section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        color: ${({ theme }) => theme.colors.primary};
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+          color: ${({ theme }) => theme.colors.primary};
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      button {
+        font-size: 0.9rem;
+      }
+      > section {
+        gap: 0.5rem;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+`;
