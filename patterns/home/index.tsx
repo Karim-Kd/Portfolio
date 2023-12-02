@@ -9,7 +9,7 @@ export default function Home() {
 
   const [index, setIndex] = useState(0);
   const texts = ['Dotnet developer', 'Angular developer', 'Full-Stack developer'];
-
+  //
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % texts.length);
